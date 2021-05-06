@@ -1,6 +1,6 @@
-/*
-Challenge: Change the <App /> component into a stateful class component and load the imported `todosData` into state
-*/
+/**
+ * Challenge: Get rid of our warning about not having an onChange on our input. For now, the function that runs onChange can simply console.log something.
+ */
 
 import React from "react";
 import "./App.css";
@@ -16,8 +16,7 @@ class App extends React.Component {
   }
 
   render() {
-    const todoItems = this.state.todos.map((item) =>
-      <TodoItem key={item.id} todo={item} />);
+    const todoItems = this.state.todos.map(item => <TodoItem key={item.id} todo={item} />)
 
     return (
       <div className="todo-list">
