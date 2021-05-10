@@ -1,3 +1,7 @@
+/**
+ * Challenge: Style the completed todo items differently from the incomplete items.
+ */
+
 import React from "react";
 
 function TodoItem(props) {
@@ -8,7 +12,9 @@ function TodoItem(props) {
         checked={props.todo.completed}
         onChange={() => props.handleChange(props.todo.id)}
       />
-      <p>{props.todo.text}</p>
+      <p className={props.todo.completed ? "completed" : null}>
+        {props.todo.text}
+      </p>
     </div>
   );
 }
